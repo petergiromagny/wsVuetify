@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div v-for="product in products" :key="product.id">
+    <div v-for="product in products" :key="product.id" class="product--list">
       <Products :name="product.name" :color="product.color" :quantity="product.quantity" :price="product.price" :img="product.img" />
     </div>
   </div>
@@ -24,8 +24,14 @@ export default {
 </script>
 
 <style>
-  .product--list{
-    flex-direction: column;
+  .home{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    margin: auto;
     justify-content: space-between;
+  }
+  .product--list{
+    padding: 2rem;
   }
 </style>
