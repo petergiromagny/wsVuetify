@@ -1,12 +1,25 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <banner />
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+
+  import Banner from '@/components/Banner.vue'
+
+  export default {
+    name: 'Home',
+    components: {
+      // eslint-disable-next-line vue/no-unused-components
+      Banner,
+    }
+  }
+
+</script>
 
 <style lang="scss">
 #app {
@@ -18,14 +31,17 @@
 }
 
 #nav {
-  padding: 30px;
-
+  background: #2c3e50;
+  img {
+    width: 30px;
+  }
   a {
+    text-decoration: none;
     font-weight: bold;
-    color: #2c3e50;
+    color: white;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: white;
     }
   }
 }
