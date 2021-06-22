@@ -1,32 +1,43 @@
 <template>
-  <v-card class="mx-auto" max-width="344" outlined>
-    <v-list-item three-line>
-      <v-list-item-content>
-        <!-- <div class="text-overline mb-4">
-          <img :src="require(img)" :alt="name">
-        </div> -->
-        <div class="text-overline mb-4">
-          <p>{{ name }}</p>
-          <div v-if="quantity > 0">
-            <p>In stock</p>
+  <v-card
+    min-width="344"
+  >
+    <a href="" class="product--link">
+      <v-list-item three-line>
+        <v-list-item-content>
+          <!-- <div class="text-overline mb-4">
+            <img :src="require(img)" :alt="name">
+          </div> -->
+          <div class="text-overline mb-4 name--stock">
+            <p>{{name}}</p>
+            <div v-if="quantity > 0">
+              <p class="inStock">In stock</p>
+            </div>
+            <div v-if="quantity == 0">
+              <p class="outOfStock">Out of stock</p>
+            </div>
           </div>
-          <div v-if="quantity == 0">
-            <p>Out of stock</p>
-          </div>
-        </div>
-        <v-list-item-title class="text-h5 mb-1"> Headline 5 </v-list-item-title>
-        <v-list-item-subtitle
-          >Greyhound divisely hello coldly fonwderfully</v-list-item-subtitle
+          <v-list-item-title class="text-h5 mb-1">
+            <p>Price {{ price }} $</p>
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            <p>Quantity {{ quantity }}</p>
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-card-actions class="button--container">
+        <v-btn
+          outlined
+          rounded
+          text
         >
-      </v-list-item-content>
-
-      <v-list-item-avatar tile size="80" color="grey"></v-list-item-avatar>
-    </v-list-item>
-
-    <v-card-actions>
-      <v-btn outlined rounded text @click="addToCard()"> Add to cart </v-btn>
-    </v-card-actions>
+          Add to cart
+        </v-btn>
+      </v-card-actions>
+    </a>
   </v-card>
+
 </template>
 
 <script>
@@ -57,5 +68,28 @@ export default {
   }
 }
 </script>
+
 <style>
+  p{
+    margin: 5px 0;
+  }
+  a{
+    text-decoration: none;
+  }
+  .name--stock{
+    display: flex !important;
+    justify-content: center;
+  }
+  .name--stock > p{
+    margin-right: 10px
+  }
+  .inStock{
+    color: green;
+  } 
+  .outOfStock{
+    color: red;
+  }
+  .button--container{
+    justify-content: flex-end;
+  }
 </style>

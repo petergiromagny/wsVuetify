@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 // eslint-disable-next-line no-unused-vars
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
@@ -41,25 +41,23 @@ export default new Vuex.Store({
         img: "/products/gloves.jpg"
       }
     ],
-    cart:[
-    ]
+    cart: [],
   },
   mutations: {
     INCREMENT_SHOPPING_CART(state, amount) {
-      state.shoppingCart += amount
+      state.shoppingCart += amount;
     },
     ADD_TO_SHOPPING_CART(state, item) {
-      state.panier.push(item)
-    }
+      state.panier.push(item);
+    },
   },
   actions: {
     updateShoppingCart({ commit }, amount) {
-      commit("INCREMENT_SHOPPING_CART", amount)
+      commit('INCREMENT_SHOPPING_CART', amount);
     },
-    updateCart({commit}, item) {
-      commit("ADD_TO_SHOPPING_CART", item)
-    }
+    updateCart({ commit }, item) {
+      commit('ADD_TO_SHOPPING_CART', item);
+    },
   },
-  modules: {
-  }
-})
+  modules: {},
+});

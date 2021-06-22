@@ -24,8 +24,14 @@ export default {
 </script>
 
 <style>
-  .product--list{
-    flex-direction: column;
+  .home{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 70%;
+    margin: auto;
     justify-content: space-between;
+  }
+  .product--list{
+    padding: 2rem;
   }
 </style>
