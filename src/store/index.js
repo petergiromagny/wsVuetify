@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 // eslint-disable-next-line no-unused-vars
-import {stack} from "vuetify/src/components/VCalendar/modes/stack";
 
 Vue.use(Vuex)
 

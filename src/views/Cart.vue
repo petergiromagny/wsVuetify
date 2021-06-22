@@ -17,18 +17,19 @@ export default {
 </script>
 
 <template>
+  <div>
+    <Banner> </Banner>
 
-  <Banner> </Banner>
-
-  <Product
-    v-for="item in panier"
-    :name="item.name"
-    :image="item.image"
-    :price="item.price"
-    :quantity="item.quantity"
-    :inStock="item.inStock"
-    :key="item.name"
-  />
+    <Product
+        v-for="item in panier"
+        :name="item.name"
+        :image="item.image"
+        :price="item.price"
+        :quantity="item.quantity"
+        :inStock="item.inStock"
+        :key="item.name"
+    />
+  </div>
 
 </template>
 
