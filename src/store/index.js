@@ -9,37 +9,36 @@ export default new Vuex.Store({
     shoppingCart: 0,
     itemList: [
       {
-        id:1,
-        name: "Croissant",
-        image: {
-          source: "/images/crossiant.jpg",
-          alt: "Un croissant"
-        },
-        inStock: true,
-        quantity: 13,
-        price: 2.99
+        "id": 1,
+        "name": "Chaussette",
+        "color": "green",
+        "quantity": "10",
+        "price": "5",
+        "img": "@/assets/products/sockets"
       },
       {
-        id:2,
-        name: "Baguette de pain",
-        image: {
-          source: "/images/french-baguette.jpeg",
-          alt: "Quatre baguettes de pain"
-        },
-        inStock: true,
-        quantity: 14,
-        price: 3.99
+        "id": 2,
+        "name": "Chaussette",
+        "color": "grey",
+        "quantity": "10",
+        "price": "5",
+        "img": "@/assets/products/sockets"
       },
       {
-        id:1,
-        name: "Éclair",
-        image: {
-          source: "/images/eclair.jpg",
-          alt: "Éclair au chocolat"
-        },
-        inStock: false,
-        quantity: 15,
-        price: 4.99
+        "id": 3,
+        "name": "Gants",
+        "color": "blue",
+        "quantity": "0",
+        "price": "15",
+        "img": "@/assets/products/gloves"
+      },
+      {
+        "id": 4,
+        "name": "Gants",
+        "color": "pink",
+        "quantity": "5",
+        "price": "15",
+        "img": "@/assets/products/gloves"
       }
     ],
     cart:[

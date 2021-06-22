@@ -1,12 +1,13 @@
 <template>
   <div class="storetest">
-    <div v-for="product in products" :key="product.id">
+    <div v-for="product in this.itemList" :key="product.id">
       <v-card
           max-width="375"
           class="mx-auto"
+          style="margin:auto"
       >
         <v-img
-            src=product.img
+            v-bind:src = product.img
             height="300px"
             dark
         ></v-img>
@@ -49,13 +50,13 @@
 </template>
 
 <script lang="ts">
-import products from '@/data/products'
+
+import {mapState} from "vuex";
+
 export default {
   name : "storeComponent",
-  data: function() {
-    return {
-      products: products
-    };
+  computed:{
+    ...mapState(["itemList"])
   }
 }
 
