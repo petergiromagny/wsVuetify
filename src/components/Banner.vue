@@ -23,7 +23,7 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/">
+      <router-link to="/Cart">
           <v-icon
               icon="mdi-cart"
               color="white"

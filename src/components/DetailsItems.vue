@@ -1,12 +1,13 @@
 <template>
   <div class="storetest">
-    <div v-for="product in products" :key="product.id">
+    <div>
       <v-card
           max-width="375"
           class="mx-auto"
+          style="margin:auto"
       >
         <v-img
-            src=product.img
+            :src="item.img"
             height="300px"
             dark
         ></v-img>
@@ -15,7 +16,7 @@
           <v-list-item>
                 Product Name
             <v-list-item-content>
-              <v-list-item-title>{{product.name}}</v-list-item-title>
+              <v-list-item-title>{{item.name}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -23,7 +24,7 @@
           <v-list-item>
             Color
             <v-list-item-content>
-              <v-list-item-title>{{product.color}}</v-list-item-title>
+              <v-list-item-title>{{item.color}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -31,7 +32,7 @@
           <v-list-item>
             Quantity
             <v-list-item-content>
-              <v-list-item-title>{{product.quantity}}</v-list-item-title>
+              <v-list-item-title>{{item.quantity}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -39,7 +40,7 @@
           <v-list-item>
             Price
             <v-list-item-content>
-              <v-list-item-title>{{product.price}}</v-list-item-title>
+              <v-list-item-title>{{item.price}}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
         </v-list>
@@ -49,13 +50,22 @@
 </template>
 
 <script lang="ts">
-import products from '@/data/products'
+
+import {mapState} from "vuex";
+
 export default {
   name : "storeComponent",
-  data: function() {
+  computed:{
+    ...mapState(["itemList"])
+  },
+  data() {
     return {
-      products: products
-    };
+      item: {}
+    }
+  },
+  mounted() {
+      this.item = this.itemList.find(x => {return x.id == this.$route.params.id})
+      console.log(this.item)
   }
 }
 
