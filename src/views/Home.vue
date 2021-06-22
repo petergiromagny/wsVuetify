@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div v-for="product in products" :key="product.id">
-      <Products :name="product.name" :color="product.color" :quantity="product.quantity" :price="product.price" :img="product.img" />
+      <Products :id="product.id" :name="product.name" :color="product.color" :quantity="product.quantity" :price="product.price" :img="product.img" />
     </div>
   </div>
 </template>
