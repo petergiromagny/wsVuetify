@@ -9,36 +9,36 @@ export default new Vuex.Store({
     shoppingCart: 0,
     itemList: [
       {
-        "id": 1,
-        "name": "Chaussette",
-        "color": "green",
-        "quantity": "10",
-        "price": "5",
-        "img": "@/assets/products/sockets"
+        id: 1,
+        name: "Chaussette",
+        color: "green",
+        quantity: 10,
+        price: 5,
+        img: "/products/sockets.jpg"
       },
       {
-        "id": 2,
-        "name": "Chaussette",
-        "color": "grey",
-        "quantity": "10",
-        "price": "5",
-        "img": "@/assets/products/sockets"
+        id: 2,
+        name: "Chaussette",
+        color: "grey",
+        quantity: 10,
+        price: 5,
+        img: "/products/sockets.jpg"
       },
       {
-        "id": 3,
-        "name": "Gants",
-        "color": "blue",
-        "quantity": "0",
-        "price": "15",
-        "img": "@/assets/products/gloves"
+        id: 3,
+        name: "Gants",
+        color: "blue",
+        quantity: 0,
+        price: 15,
+        img: "/products/gloves.jpg"
       },
       {
-        "id": 4,
-        "name": "Gants",
-        "color": "pink",
-        "quantity": "5",
-        "price": "15",
-        "img": "@/assets/products/gloves"
+        id: 4,
+        name: "Gants",
+        color: "pink",
+        quantity: 5,
+        price: 15,
+        img: "/products/gloves.jpg"
       }
     ],
     cart:[
