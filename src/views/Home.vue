@@ -1,13 +1,13 @@
 <template>
   <div class="home">
     <div v-for="product in products" :key="product.id">
-      <Products />
+      <Products :name="product.name" :color="product.color" :quantity="product.quantity" :price="product.price" :img="product.img" />
     </div>
   </div>
 </template>
 
 <script>
-import products from '@/data/products'
+import productsData from '@/data/products'
 import Products from '@/components/Products'
 
 export default {
@@ -17,8 +17,15 @@ export default {
   },
   data: function() {
     return {
-        products: products
+        products: productsData
       };
     }
   }
 </script>
+
+<style>
+  .product--list{
+    flex-direction: column;
+    justify-content: space-between;
+  }
+</style>
