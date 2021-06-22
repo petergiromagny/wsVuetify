@@ -44,5 +44,8 @@
       color: white;
     }
   }
+  .v-app-bar {
+    background-color: #37377b;
+  }
 }
 </style>
